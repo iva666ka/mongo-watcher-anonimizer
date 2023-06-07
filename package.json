@@ -1,0 +1,26 @@
+{
+  "name": "mongo-watcher-anonimizer",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "app-dev": "ts-node -r dotenv/config app.ts",
+    "sync-dev": "ts-node -r dotenv/config sync.ts",
+    "sync-full-reindex-dev": "ts-node -r dotenv/config sync.ts --full-reindex"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^20.2.5",
+    "prettier": "2.8.8",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.0.4"
+  },
+  "dependencies": {
+    "@faker-js/faker": "^8.0.2",
+    "dotenv": "^16.0.3",
+    "mongodb": "^5.5.0"
+  }
+}
