@@ -1,4 +1,4 @@
-import { faker, ne } from "@faker-js/faker";
+import { faker } from "@faker-js/faker";
 import { ICustomer } from "./app";
 import { getCollection } from "./db";
 import { Filter, ObjectId, WithId } from "mongodb";
@@ -102,7 +102,7 @@ async function syncAfterId(id?: string | ObjectId): Promise<ObjectId> {
   if (Boolean(id)) {
     filter._id = { $gt: new ObjectId(id) };
   }
-  const cursor = customerCollection.find(filter, { sort: { _id: 1 } });
+  const cursor = customerCollection.find(filter);
 
   let lastSavedId: ObjectId | undefined;
 
